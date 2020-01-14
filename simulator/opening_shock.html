@@ -1,24 +1,77 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <meta charset="utf-8">
-    <title>Opening Shock Calculator</title>
+    <script>
+    function add(){
+    var a,b,c;
+    Cd=Number(document.getElementById("Cd").value);
+    s0=Number(document.getElementById("S").value);
+    ndf= Cd * s0;
+    v=Number(document.getElementById("V").value);
+    d=Number(document.getElementById("D").value);
+    cx=Number(document.getElementById("CX").value);
+    dp=0.5*d*(v*v)
+    result=ndf*dp*cx
+    document.getElementById("answer").value= result+" N";
+    }
+    </script>
   </head>
+
+
+
+    <!-- <title>Opening Shock Calculator</title>
+  </head> -->
   <body>
-    <h1>THIS IS THE OPENING SHOCK CALCULATOR</h1>
-    <form class="" action="index.html" method="post">
+    <center><h1>OPENING SHOCK CALCULATOR</h1></center>
+    <h3>Select the Condition</h3>
+  <form class="form" action="index.html" id=form1 method="post">
   <div class="form-check">
   <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
   <label class="form-check-label" for="exampleRadios1">
-    Default radio
+    Normal
   </label>
 </div>
 <div class="form-check">
   <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
   <label class="form-check-label" for="exampleRadios2">
-    Second default radio
+    Emergency
   </label>
 </div>
-    </form>
+  <h3>Nominal Drag Area</h3>
+    <div class="form-group row">
+      <label for="colFormLabelSm"  class="col-sm-2 col-form-label col-form-label-sm">Drag Coefficent</label>
+      <div class="col-sm-10">
+        <input id="Cd" placeholder="e.i. 0.715">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="colFormLabel"  class="col-sm-2 col-form-label">Nominal Parachute Area</label>
+      <div class="col-sm-10">
+        <input id="S" placeholder="e.i. 20.31">
+      </div>
+    </div>
+    <h3>Dynamic Pressure</h3>
+    <div class="form-group row">
+      <label for="colFormLabelLg" class="col-sm-2 col-form-label col-form-label-lg">Velocity</label>
+      <div class="col-sm-10">
+        <input id="V" placeholder="Parachute Deployement- m/s">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="colFormLabelLg" class="col-sm-2 col-form-label col-form-label-lg">Density</label>
+      <div class="col-sm-10">
+        <input id="D" placeholder="Sea Level- kg/m^3">
+      </div>
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="colFormLabelLg" class="col-sm-2 col-form-label col-form-label-lg">Opening Shock Factor</label>
+    <div class="col-sm-10">
+      <input id="CX" placeholder="Infinite mass case,i.e 1.2">
+    </div>
+  </div>
+</form>
+<button onclick="add()">Calculate Opening Shock</button>
+<input id="answer">
   </body>
 </html>
