@@ -2,6 +2,7 @@
 <html lang="en" dir="ltr">
   <head>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<link rel="stylesheet" href="/home/brijesh/Desktop/resume/redhat_resume/sytle.css">
     <script>
     function add(){
     var a,b,c;
@@ -14,60 +15,62 @@
     dp=0.5*d*(v*v)
     result=ndf*dp*cx
     document.getElementById("answer").value= result+" N";
+
     }
     </script>
   </head>
-  <body>
+  <title>Opening Shock Calculator</title>
+  <body style="background-color:#edf7f7;">
     <center><h1>OPENING SHOCK CALCULATOR</h1></center>
-    <h4>Select the Condition</h4>
-  <form class="form" action="index.html" id=form1 method="post">
-  <div class="form-check">
-  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
-  <label class="form-check-label" for="exampleRadios1">
-    Normal
-  </label>
+<h4>Select the Condition</h4>
+<form class="form" action="index.html" id=form1 method="post">
+<div class="form-check">
+<input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+<label class="form-check-label" for="exampleRadios1">
+Normal
+</label>
 </div>
 <div class="form-check">
-  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
-  <label class="form-check-label" for="exampleRadios2">
-    Emergency
-  </label>
+<input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+<label class="form-check-label" for="exampleRadios2">
+Emergency
+</label>
 </div>
-  <h4>Nominal Drag Area</h4>
-    <div class="form-group row">
-      <label for="colFormLabelSm"  class="col-sm-2 col-form-label col-form-label-sm">Drag Coefficent</label>
-      <div class="col-sm-10">
-        <input id="Cd" size= "30" placeholder="e.i. 0.715">
-      </div>
-    </div>
-    <div class="form-group row">
-      <label for="colFormLabel"  class="col-sm-2 col-form-label">Nominal Parachute Area</label>
-      <div class="col-sm-10">
-        <input id="S" size= "30" placeholder="e.i. 20.31">
-      </div>
-    </div>
-    <h4>Dynamic Pressure</h4>
-    <div class="form-group row">
-      <label for="colFormLabelLg" class="col-sm-2 col-form-label col-form-label-lg">Velocity</label>
-      <div class="col-sm-10">
-        <input id="V" size= "30" placeholder="Parachute Deployement- m/s">
-      </div>
-    </div>
-    <div class="form-group row">
-      <label for="colFormLabelLg" class="col-sm-2 col-form-label col-form-label-lg">Density</label>
-      <div class="col-sm-10">
-        <input id="D"  size= "30" placeholder="Sea Level- kg/m^3">
-      </div>
+<h4>Nominal Drag Area</h4>
+  <div class="form-group row">
+    <label for="colFormLabelSm"  class="col-sm-2 col-form-label col-form-label-sm">Drag Coefficent</label>
+    <div class="col-sm-10">
+      <input id="Cd" size= "30" placeholder="e.i. 0.715">
     </div>
   </div>
   <div class="form-group row">
-    <label for="colFormLabelLg" class="col-sm-2 col-form-label col-form-label-lg">Opening Shock Factor</label>
+    <label for="colFormLabel"  class="col-sm-2 col-form-label">Nominal Parachute Area</label>
     <div class="col-sm-10">
-      <input id="CX" size= "30" placeholder="Infinite mass case,i.e 1.2">
+      <input id="S" size= "30" placeholder="e.i. 20.31">
     </div>
   </div>
+  <h4>Dynamic Pressure</h4>
+  <div class="form-group row">
+    <label for="colFormLabelLg" class="col-sm-2 col-form-label col-form-label-lg">Velocity</label>
+    <div class="col-sm-10">
+      <input id="V" size= "30" placeholder="Parachute Deployement- m/s">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="colFormLabelLg" class="col-sm-2 col-form-label col-form-label-lg">Density</label>
+    <div class="col-sm-10">
+      <input id="D"  size= "30" placeholder="Sea Level- kg/m^3">
+    </div>
+  </div>
+<div class="form-group row">
+  <label for="colFormLabelLg" class="col-sm-2 col-form-label col-form-label-lg">Opening Shock Factor</label>
+  <div class="col-sm-10">
+    <input id="CX" size= "30" placeholder="Infinite mass case,i.e 1.2">
+  </div>
+</div>
 </form>
 <button onclick="add()">Calculate Opening Shock</button>
-<input id="answer" size= "37">
+<input id="answer" size= "34">
+
   </body>
 </html>
